@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(180deg, #f7f8fc 0%, #f1f4f9 100%);
+  color: #1a1f2b;
+}
+
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.hero {
+  margin-bottom: 1rem;
+}
+
+.eyebrow {
+  color: #6c4dff;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+}
+
+.subtitle {
+  color: #5f6777;
+  max-width: 760px;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.4rem 0;
+}
+
+.tab {
+  border: 1px solid #d6dbeb;
+  background: #fff;
+  color: #1f2430;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #1f2430;
+  color: #fff;
+  border-color: #1f2430;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #dfe4f1;
+  border-radius: 20px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 10px 30px rgba(37, 49, 79, 0.06);
+}
+
+.grid-form,
+.filters {
+  display: grid;
+  gap: 0.7rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #d3d9ea;
+  border-radius: 12px;
+  padding: 0.65rem 0.75rem;
+  background: #fff;
+}
+
+textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 0.6rem 0.9rem;
+  background: #3c56f6;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+button.ghost {
+  background: #eaf0ff;
+  color: #2a3f9b;
+}
+
+button.danger {
+  background: #f15a68;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.movie-card {
+  border: 1px solid #d9deec;
+  border-radius: 20px;
+  background: #fff;
+  padding: 0.1rem;
+}
+
+.movie-content {
+  padding: 0.8rem;
+}
+
+.movie-content h3 {
+  margin: 0 0 0.4rem;
+}
+
+.small {
+  color: #616b7f;
+  font-size: 0.92rem;
+}
+
+.chips {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin: 0.65rem 0;
+}
+
+.chips span {
+  background: #eef2ff;
+  border-radius: 999px;
+  padding: 0.24rem 0.62rem;
+  font-size: 0.8rem;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+}
+
+.icon-btn {
+  background: #eef2ff;
+  color: #3347b8;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.icon-btn.active {
+  background: #ffe7ec;
+  color: #e64b66;
+}
+
+.watch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  align-items: center;
+  border: 1px solid #e2e7f3;
+  border-radius: 14px;
+  padding: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.list-meta {
+  min-width: 0;
+}
+
+.watch-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.watch-actions select {
+  min-width: 140px;
+  flex: 1 1 140px;
+}
+
+.alert {
+  border-radius: 12px;
+  padding: 0.65rem 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.alert.error {
+  background: #ffe8ea;
+  color: #9f2230;
+}
+
+.alert.success {
+  background: #e9f8ee;
+  color: #1f6a3b;
+}
+
+.toast {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background: rgba(26, 31, 43, 0.92);
+  color: #fff;
+  padding: 0.65rem 0.9rem;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  animation: slide-up 0.25s ease-out;
+  z-index: 40;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.distribution {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 0.5rem;
+}
+
+@media (max-width: 920px) {
+  .list-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .watch-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .watch-actions select {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
