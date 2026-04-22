@@ -62,16 +62,16 @@ function initDB(PDO $pdo): void {
 
 function seedMovies(PDO $pdo): void {
     $movies = [
-        ['The Shawshank Redemption', 'Frank Darabont',     1994, 'Dráma',         'Két bebörtönzött férfi összebarátkozik évtizedek alatt, közös tisztességük és kegyelmük révén megváltást találva.', null],
-        ['The Godfather',            'Francis Ford Coppola',1972, 'Krimi / Dráma', 'Az öreg Vito Corleone gengszterbirodalma és örökségének átadása.', null],
-        ['Inception',                'Christopher Nolan',  2010, 'Sci-fi / Akció','Egy tolvaj, aki álmokba hatolva lop titkokat, egy utolsó feladatot kap: ültessen gondolatot valaki elméjébe.', null],
-        ['Interstellar',             'Christopher Nolan',  2014, 'Sci-fi',         'Egy csapat asztronauta utazik a galaxis másik végébe, hogy megtalálja az emberiség új otthonát.', null],
-        ['Pulp Fiction',             'Quentin Tarantino',  1994, 'Krimi / Dráma', 'Los Angeles-i bűnözők, kisebb és nagyobb, egymással összefüggő kalandjai.', null],
-        ['The Dark Knight',          'Christopher Nolan',  2008, 'Akció / Krimi', 'Batman szembesül a Joker anarchiájával Gotham Cityben.', null],
-        ['Forrest Gump',             'Robert Zemeckis',    1994, 'Dráma / Vígjáték','Egy alacsony IQ-jú, de jó szívű alabamai férfi életútja az 1950-es évektől napjainkig.', null],
-        ['The Matrix',               'The Wachowskis',     1999, 'Sci-fi / Akció','Egy hacker rájön, hogy a valóság, amelyben él, egy gépi civilizáció által szimulált világ.', null],
-        ['Schindler\'s List',         'Steven Spielberg',   1993, 'Történelmi / Dráma','Oskar Schindler náci üzletember megment több mint ezer zsidót a holokauszttól.', null],
-        ['Fight Club',               'David Fincher',      1999, 'Dráma / Thriller','Egy szappangyártó és egy karizmatikus szélhámos titokban alapít egy harcklub hálózatot.', null],
+        ['A remény rabjai', 'Frank Darabont',1994, 'Dráma','Két bebörtönzött férfi összebarátkozik évtizedek alatt, közös tisztességük és kegyelmük révén megváltást találva.', null],
+        ['A Keresztapa','Francis Ford Coppola',1972,'Krimi / Dráma', 'Az öreg Vito Corleone gengszterbirodalma és örökségének átadása.', null],
+        ['Eredet','Christopher Nolan',2010,'Sci-fi / Akció','Egy tolvaj, aki álmokba hatolva lop titkokat, egy utolsó feladatot kap: ültessen gondolatot valaki elméjébe.', null],
+        ['Csillagok között','Christopher Nolan',2014, 'Sci-fi','Egy csapat asztronauta utazik a galaxis másik végébe, hogy megtalálja az emberiség új otthonát.', null],
+        ['Ponyvaregény','Quentin Tarantino',1994, 'Krimi / Dráma','Los Angeles-i bűnözők, kisebb és nagyobb, egymással összefüggő kalandjai.', null],
+        ['A sötét lovag','Christopher Nolan',2008, 'Akció / Krimi','Batman szembesül a Joker anarchiájával Gotham Cityben.', null],
+        ['Forrest Gump','Robert Zemeckis',1994, 'Dráma / Vígjáték','Egy alacsony IQ-jú, de jó szívű alabamai férfi életútja az 1950-es évektől napjainkig.', null],
+        ['Mátrix','The Wachowskis',1999, 'Sci-fi / Akció','Egy hacker rájön, hogy a valóság, amelyben él, egy gépi civilizáció által szimulált világ.', null],
+        ['Schindler listája','Steven Spielberg',1993, 'Történelmi / Dráma','Oskar Schindler náci üzletember megment több mint ezer zsidót a holokauszttól.', null],
+        ['Harcosok klubja','David Fincher',1999, 'Dráma / Thriller','Egy szappangyártó és egy karizmatikus szélhámos titokban alapít egy harcklub hálózatot.', null],
     ];
 
     $stmt = $pdo->prepare("
